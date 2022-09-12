@@ -1,6 +1,10 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
 }
 
 .logo {
@@ -9,11 +13,25 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+  flex: 0 1 auto;
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+/* After seeing the solution: a better way is to use the gap property 
+(on the container ul). This is a grid property only affecting gutters 
+(no need to specify the margin at the start and end to 0 manually when 
+using gap */
+li {
+  margin: 0.5em;
 }
 
 a {
